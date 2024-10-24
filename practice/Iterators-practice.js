@@ -10,17 +10,18 @@ let persons = [
 
 //1. List the person with javascript tag
 
-let personTags = persons.map((person) =>{
-                            if (person) {
+let personWithJavaScriptTags = persons.map((person) =>{
+                            if (person.tags === "javascript") {
                                 return {
-                                    tags: person.tags
+                                    person
                                 }
                             }
-})
+}).filter((person) => person !== undefined)
+console.log("List of JavaScript developers:")
+console.log(personWithJavaScriptTags)
+console.log();
 
-console.log(personTags)
-
-//2. List the name of person using java and put programmer after their name, change the name key to Developer
+//2. List the name of person using java and put programmer after their names, change the name key to Developer
 
 let javaProgrammers = persons.map((person) => {
                                 if (person.tags === "java") {
@@ -31,14 +32,16 @@ let javaProgrammers = persons.map((person) => {
                                     }
                                 }
 }).filter((person) => person !== undefined)
-
+console.log("Java programmers:")
 console.log(javaProgrammers)
-
+console.log()
 
 //3. If we have anyone with tag python
-let pythonDeveloper = persons.some((person) => person.tags ==="Python")
 
+let pythonDeveloper = persons.some((person) => person.tags.toLocaleUpperCase() ==="PYTHON")
+console.log("Are there any Python developers:")
 console.log(pythonDeveloper)
+console.log()
 
 //4. Find the number of unique tags and their count present in list
 
@@ -47,4 +50,5 @@ let typeOfDeveloperCounts = persons.reduce((prevObject, currObject,nu,list)  => 
     return prevObject
 }, new Set())
 
+console.log("List of number developers of different types:")
 console.log(typeOfDeveloperCounts)

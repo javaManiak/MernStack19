@@ -2,30 +2,30 @@
 //Spread Operator -
 //create a list of vaccines and print
 
-let vaccineList = ["Covid-19", "Heptisis-A", "Flu", "TDap"];
+let vaccineList = ["Covid-19", "Flu", "TDap"];
+console.log("List of vaccines:")
 console.log(vaccineList)
 
 //create doctor object and print his qualifications and other details using spread
-
-console.log("Doctor's basic info:")
 let doctor = {
     id: 1,
     docName: "Alfred",
-    type: "physician",
+    type: "residence",
     yearsOfPractice: 5,
 }
+console.log("Doctor's basic info:")
 console.log(doctor)
 
-console.log("Doctor's addres:")
 let address = {
     location: "New York",
     zipCode: 12345,
     hospital: "medical center"
 }
+console.log("Doctor's address:")
 console.log(address)
 
-console.log("Doctor's full details:")
 let fullDetails = {...doctor, ...address}
+console.log("Doctor's full details:")
 console.log(fullDetails)
 
 //create a vaccine object with details like - name, no of doses required, price etc and merge it with nearest doctor object using spread
@@ -37,6 +37,7 @@ let vaccineDetails = {
 }
 
 let doctorVaccine = {...doctor, ...vaccineDetails}
+console.log("Doctor with vaccine details:")
 console.log(doctorVaccine)
 
 
@@ -45,6 +46,7 @@ console.log(doctorVaccine)
 //then use this array to pass as spread operator into a function named largesum
 //in largesum we should accept the array in rest parameter (...arrayOfNums), and then add the numbers
 
+// create the array
 let arr = []
 for (i = 100; i <= 150; i++) {
     arr.push(i)
@@ -59,4 +61,6 @@ let largesum = function(...restNumberList)
     return sum;
 }
 
-console.log(largesum(...arr));
+console.log()
+console.log("The sum of the array in question  array[100...150] is: ", largesum(...arr))
+// console.log(largesum(...arr));
