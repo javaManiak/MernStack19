@@ -1,0 +1,28 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "api's built using express",
+  "main": "server.js",
+  "scripts": {
+    "auto": "node server.js",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Ma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javaManiak/MernStack19.git"
+  },
+  "keywords": [
+    "merstack"
+  ],
+  "bugs": {
+    "url": "https://github.com/javaManiak/MernStack19/issues"
+  },
+  "homepage": "https://github.com/javaManiak/MernStack19#readme"
+}

@@ -1,7 +1,7 @@
 
 //Questions for practice
 let Student = {
-    FirstName : "Stacy",
+    FirstName : "Jason",
     Standard : "Higher Secondary",
     Session : "Final Session",
     TotalMarks : "75%",

@@ -37,3 +37,4 @@ studentPromise.then((data, error) => {
     console.log(error)
 })
 
+console.log(studentPromise)

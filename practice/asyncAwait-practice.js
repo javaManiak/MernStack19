@@ -77,9 +77,6 @@ console.log("async execution ends.")
 
 // analyse how await works as blocking execution
 
-// create one set of map using different types of keys and at least show the usage of 5 functions (.get, .clear)
+    // sync - wait until the first call is done
 
-
-// create a list using set and show the usage of 5 functions (.add, .clear)
-
-// create and example of arithmetic operations (addition, subtraction, multiply, division), using generator function
+    // async - return and wait for the result to be return  

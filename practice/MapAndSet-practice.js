@@ -44,3 +44,64 @@ StateToVisit.add("Mississippi");
 
 console.log(StateToVisit.size);
 console.log(StateToVisit)
+
+// create one set of map using different types of keys and at least show the usage of 5 functions (.get, .clear)
+
+    // various types of map keys
+console.log("Map manipulation starts ... ");
+
+    let stringAsKey = "stringAsKey"
+    let objAsKey = {}  // empty object
+    let funcAsKey = function() {} // an empty function
+    let numberAsKey = 100;
+
+    let myMap = new Map();
+
+    myMap.set(stringAsKey, "yesterday");                    // set 
+    myMap.set(objAsKey, [4, 5] )
+    myMap.set(funcAsKey, myfunc = function() {console.log("I am a function")});
+    myMap.set(numberAsKey, 111);
+
+    console.log("print 'myMap'")
+    console.log(myMap);
+    
+    myMap.set(numberAsKey, 921);
+    console.log(myMap);
+    
+    console.log("Retrieve value from 'funcAsKey' in 'myMap'")
+    console.log(myMap.get("funcAsKey"));                       // get
+    
+    console.log("show size of 'myMap'")
+    console.log(myMap.size);                                    // size
+    
+    console.log("show myMap after delete value with key = 'objAsKey': ")
+    myMap.delete(objAsKey);                                     // delete
+    console.log(myMap)
+
+    console.log("Execute the fuinction from 'myMap'");
+    console.log(myMap.get(funcAsKey));
+
+    console.log("show key set:", myMap.keys);
+    console.log("print myMap after 'clear' everything")
+    myMap.clear();                                              //clear()
+    console.log(myMap)
+
+// create a list using set and show the usage of 5 functions (.add, .clear)
+
+let mySet = new Set;
+
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add(4);
+mySet.add(5);
+
+console.log("mySet = ")
+console.log(mySet);
+
+let myList = [];
+
+myList = mySet;
+
+console.log("myList =");
+console.log(myList);
